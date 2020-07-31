@@ -1,52 +1,52 @@
 {
-  "logs": [
-    {
-      "id": 1,
-      "message": "Change hard drive on workstation 005",
-      "attention": false,
-      "date": "03-00-00",
-      "tech": "Sam Smith"
-    },
-    {
-      "id": 2,
-      "message": "Workstation 007 not posting",
-      "attention": true,
-      "date": "03-00-00",
-      "tech": "John Doe"
-    },
-    {
-      "id": 3,
-      "message": "Change memory on workstation 050",
-      "attention": false,
-      "date": "03-00-00",
-      "tech": "Sarrah Wilson"
-    }
-  ],
-  "techs": [
-    {
-      "id": 1,
-      "firstname": "John",
-      "lastname": "Doe"
-    },
-    {
-      "id": 2,
-      "firstname": "Sam",
-      "lastname": "Smith"
-    },
-    {
-      "id": 3,
-      "firstname": "Sarah",
-      "lastname": "Wilson"
-    },
-    {
-      "firstname": "Jen",
-      "lastname": "Wiliams",
-      "id": 4
-    },
-    {
-      "firstname": "Bart",
-      "lastname": "Simpson",
-      "id": 5
-    }
-  ]
+	"logs": [
+		{
+			"id": 1,
+			"message": "Change hard drive on workstation 005",
+			"attention": false,
+			"date": "03-20-2020",
+			"tech": "Sam Smith"
+		},
+		{
+			"id": 2,
+			"message": "Workstation 007 not posting",
+			"attention": true,
+			"date": "03-20-2020",
+			"tech": "John Doe"
+		},
+		{
+			"id": 3,
+			"message": "Change memory on workstation 050",
+			"attention": false,
+			"date": "03-20-2020",
+			"tech": "Sarrah Wilson"
+		}
+	],
+	"techs": [
+		{
+			"id": 1,
+			"firstname": "John",
+			"lastname": "Doe"
+		},
+		{
+			"id": 2,
+			"firstname": "Sam",
+			"lastname": "Smith"
+		},
+		{
+			"id": 3,
+			"firstname": "Sarah",
+			"lastname": "Wilson"
+		},
+		{
+			"firstname": "Jen",
+			"lastname": "Wiliams",
+			"id": 4
+		},
+		{
+			"firstname": "Bart",
+			"lastname": "Simpson",
+			"id": 5
+		}
+	]
 }
