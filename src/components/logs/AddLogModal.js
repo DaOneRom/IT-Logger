@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { addLog } from '../../actions/logActions';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
-const AddLogModal = () => {
+const AddLogModal = ({ addLog }) => {
 	const [message, setMessage] = useState('');
 	const [attention, setAttention] = useState(false);
 	const [tech, setTech] = useState('');
@@ -10,7 +13,14 @@ const AddLogModal = () => {
 		if (message === '' || tech === '') {
 			M.toast({ html: 'Please enter a message and tech' });
 		} else {
-			console.log(message, tech, attention);
+			const newLog = {
+				message,
+				attention,
+				tech,
+				date: new Date(),
+			};
+			addLog(newLog);
+			M.toast({ html: `Log added by ${tech}` });
 
 			//Clear fields
 			setMessage('');
@@ -20,12 +30,21 @@ const AddLogModal = () => {
 	};
 
 	return (
-		<div id='add-log-modal' className='modal' style={modalStyle}>
+		<div
+			id='add-log-modal'
+			className='modal'
+			style={modalStyle}
+		>
 			<div className='modal-content'>
 				<h4>Enter System</h4>
 				<div className='row'>
 					<div className='input-field'>
-						<input type='text' name='message' value={message} onChange={(e) => setMessage(e.target.value)} />
+						<input
+							type='text'
+							name='message'
+							value={message}
+							onChange={(e) => setMessage(e.target.value)}
+						/>
 						<label htmlFor='message' className='active'>
 							Log Message
 						</label>
@@ -34,13 +53,20 @@ const AddLogModal = () => {
 
 				<div className='row'>
 					<div className='input-field'>
-						<select name='tech' value={tech} className='browser-default' onChange={(e) => setTech(e.target.value)}>
+						<select
+							name='tech'
+							value={tech}
+							className='browser-default'
+							onChange={(e) => setTech(e.target.value)}
+						>
 							<option value='' disabled>
 								Select Technician
 							</option>
 							<option value='John Doe'>John Doe</option>
 							<option value='Sam Smith'>Sam Smith</option>
-							<option value='Sara Wilson'>Sara Wilson</option>
+							<option value='Sara Wilson'>
+								Sara Wilson
+							</option>
 						</select>
 					</div>
 				</div>
@@ -64,7 +90,11 @@ const AddLogModal = () => {
 			</div>
 
 			<div className='modal-footer'>
-				<a href='#!' onClick={onSubmit} className='modal-close waves-effect blue waves-green btn'>
+				<a
+					href='#!'
+					onClick={onSubmit}
+					className='modal-close waves-effect blue waves-green btn'
+				>
 					Enter
 				</a>
 			</div>
@@ -77,4 +107,8 @@ const modalStyle = {
 	height: '75%',
 };
 
-export default AddLogModal;
+AddLogModal.propTypes = {
+	addLog: PropTypes.func.isRequired,
+};
+
+export default connect(null, { addLog })(AddLogModal);

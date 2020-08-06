@@ -1,52 +1,66 @@
 {
-	"logs": [
-		{
-			"id": 1,
-			"message": "Change hard drive on workstation 005",
-			"attention": false,
-			"date": "03-20-2020",
-			"tech": "Sam Smith"
-		},
-		{
-			"id": 2,
-			"message": "Workstation 007 not posting",
-			"attention": true,
-			"date": "03-20-2020",
-			"tech": "John Doe"
-		},
-		{
-			"id": 3,
-			"message": "Change memory on workstation 050",
-			"attention": false,
-			"date": "03-20-2020",
-			"tech": "Sarrah Wilson"
-		}
-	],
-	"techs": [
-		{
-			"id": 1,
-			"firstname": "John",
-			"lastname": "Doe"
-		},
-		{
-			"id": 2,
-			"firstname": "Sam",
-			"lastname": "Smith"
-		},
-		{
-			"id": 3,
-			"firstname": "Sarah",
-			"lastname": "Wilson"
-		},
-		{
-			"firstname": "Jen",
-			"lastname": "Wiliams",
-			"id": 4
-		},
-		{
-			"firstname": "Bart",
-			"lastname": "Simpson",
-			"id": 5
-		}
-	]
+  "logs": [
+    {
+      "id": 1,
+      "message": "Change hard drive on workstation 005",
+      "attention": false,
+      "date": "03-20-2020",
+      "tech": "Sam Smith"
+    },
+    {
+      "id": 2,
+      "message": "Workstation 007 not posting",
+      "attention": true,
+      "date": "03-20-2020",
+      "tech": "John Doe"
+    },
+    {
+      "id": 3,
+      "message": "Change memory on workstation 050",
+      "attention": false,
+      "date": "03-20-2020",
+      "tech": "Sarrah Wilson"
+    },
+    {
+      "message": "Wireless display malfunction",
+      "attention": false,
+      "tech": "Sam Smith",
+      "date": "2020-08-06T09:58:34.583Z",
+      "id": 4
+    },
+    {
+      "message": "Hard Drive Failed in workstation 002",
+      "attention": true,
+      "tech": "Sara Wilson",
+      "date": "2020-08-06T10:00:14.189Z",
+      "id": 5
+    }
+  ],
+  "techs": [
+    {
+      "id": 1,
+      "firstname": "John",
+      "lastname": "Doe"
+    },
+    {
+      "id": 2,
+      "firstname": "Sam",
+      "lastname": "Smith"
+    },
+    {
+      "id": 3,
+      "firstname": "Sarah",
+      "lastname": "Wilson"
+    },
+    {
+      "firstname": "Jen",
+      "lastname": "Wiliams",
+      "id": 4
+    },
+    {
+      "firstname": "Bart",
+      "lastname": "Simpson",
+      "id": 5
+    }
+  ]
 }
