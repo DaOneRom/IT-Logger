@@ -11,6 +11,7 @@ import {
 	GET_TECHS,
 	ADD_TECH,
 	TECHS_ERROR,
+	DELETE_TECH,
 } from '../actions/types';
 
 const initialState = {
@@ -31,6 +32,14 @@ export default (state = initialState, action) => {
 			return {
 				...state,
 				techs: [...state.techs, action.payload],
+				loading: false,
+			};
+		case DELETE_TECH:
+			return {
+				...state,
+				techs: state.techs.filter(
+					(tech) => tech.id !== action.payload
+				),
 				loading: false,
 			};
 		case SET_LOADING:
